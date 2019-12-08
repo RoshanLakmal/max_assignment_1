@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import UserInput from './UserInput/UserInput';
+import UserOutput from './UserOutput/UserOutput';
 import './App.css';
 
 class App extends Component {
+  state = {
+    users: [{ username: 'Roshan' }, { username: 'Lakmal' }]
+  };
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>Test</h1>
+        <UserOutput username="Roshan"></UserOutput>
+        <UserOutput username="Lakmal"></UserOutput>
       </div>
     );
   }
