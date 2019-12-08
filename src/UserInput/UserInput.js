@@ -3,7 +3,7 @@ import './UserInput.css';
 
 const UserInput = props => {
   const inputStyle = {
-    boarder: '2px solid red'
+    border: '2px solid red'
   };
 
   return (
