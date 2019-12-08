@@ -5,7 +5,7 @@ const UserOutput = props => {
   return (
     <div className="UserOutput">
       <p>{props.username}</p>
-      <p></p>
+      <p>{props.password}</p>
     </div>
   );
 };

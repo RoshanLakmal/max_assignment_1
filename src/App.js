@@ -6,8 +6,8 @@ import './App.css';
 class App extends Component {
   state = {
     users: [
-      { username: 'Roshan', password: 'test' },
-      { username: 'Lakmal', password: 'test' }
+      { username: 'Roshan', password: 'password1' },
+      { username: 'Lakmal', password: 'password2' }
     ]
   };
 
@@ -25,11 +25,17 @@ class App extends Component {
       <div className="App">
         <h1>Test</h1>
         <UserInput
-          username={this.state.users[0].username}
           changed={this.addPasswordHandler}
+          currentPassword={this.state.users[0].password}
         ></UserInput>
-        <UserOutput username={this.state.users[0].username}></UserOutput>
-        <UserOutput username={this.state.users[1].username}></UserOutput>
+        <UserOutput
+          username={this.state.users[0].username}
+          password={this.state.users[0].password}
+        ></UserOutput>
+        <UserOutput
+          username={this.state.users[1].username}
+          password={this.state.users[1].password}
+        ></UserOutput>
       </div>
     );
   }
